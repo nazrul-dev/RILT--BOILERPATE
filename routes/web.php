@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\PekerjaanController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -23,3 +25,7 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
+
+Route::get('/master/pekerjaan', [PekerjaanController::class, 'getAll']);
+
